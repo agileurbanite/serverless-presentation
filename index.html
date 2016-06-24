@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>AWS Lambda and NodeJS</title>
+
+		<meta name="description" content="AWS Lambda and NodeJS">
+		<meta name="author" content="Patrick Woo">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href = "http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/bootstrap/css/bootstrap.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>AWS Lambda and NodeJS</h2>
+					<p>
+						<small>By Patrick Woo <a href="http://github.com/agileurbanite" target="_blank">Agile Urbanite</a></small>
+					</p>
+				</section>
+
+				<section>
+					<div class="span6">
+						<img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/5/005/096/1ae/2e9d9c7.jpg" alt="">
+					</div>
+					<div class="span6" style="text-align: left;">
+						<h3>About Me</h3>
+						<p>I am a software engineer at Capital One, that loves to find solutions to interesting problems.</p>
+					</div>
+				</section>
+
+				<section>
+					<h3>Serverless, FAAS, and Lambdas!</h3>
+					<p>FAAS stands for Functions As A Service that are stateless compute containers that are event-triggered and fully managed by a 3rd party.</p>
+				</section>
+
+				<section>
+					<h3>Lambda!!!</h3>
+					<img src="https://assets.vg247.com/current//2014/05/Half-Life-half-life-663708_1024_.jpg" width="70%" alt="">
+					<p><small>https://assets.vg247.com/current//2014/05/Half-Life-half-life-663708_1024_.jpg</small></p>
+				</section>
+
+				<section>
+					<h3>Why Lambda?</h3>
+					<p>This notion of the serverless architecture is that as engineers we no longer have to concern ourselves with image expiration, scaling, and managing servers.</p>
+				</section>
+
+				<section>
+					<h3>Pay for what you use!</h3>
+					<img src="http://38.media.tumblr.com/f2e1c0af52f1a47c6355386125584522/tumblr_nloi4bH1YJ1upxwm8o1_400.gif" alt="">
+					<p><small>http://38.media.tumblr.com/f2e1c0af52f1a47c6355386125584522/tumblr_nloi4bH1YJ1upxwm8o1_400.gif</small></p>
+				</section>
+
+				<section>
+					<p>We just have to upload our code and run it when an event is triggered.</p>
+					<p>Currently Lambda supports: Java, Python, and NodeJS</p>
+				</section>
+
+				<section>
+					<p>Events can be triggered multiple ways.</p>
+					<ul>
+						<li>S3</li>
+						<li>Kinesis</li>
+						<li>DynamoDB</li>
+						<li>CloudTrail</li>
+						<li>SNS</li>
+						<li>API Gateway</li>
+						<li>Mobile Backend</li>
+						<li>CRON Job</li>
+						<li>Custom User Applications</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Frameworks to investigate?</h3>
+					<a href="http://serverless.com/"><img src="http://serverless.com/images/serverless_logo_animated.gif" alt=""></a>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
